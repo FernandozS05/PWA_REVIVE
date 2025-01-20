@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../img/Imagen1.png";
 import Email from "../img/email.png";
 
 const RestablecerContrasena = () => {
   const [formData, setFormData] = useState({ email: "" });
   const [timeLeft, setTimeLeft] = useState(300);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -88,7 +90,10 @@ const RestablecerContrasena = () => {
           <button className="bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-700">
             Confirmar
           </button>
-          <button className="bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700">
+          <button
+            className="bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700"
+            onClick={() => navigate("/login")}
+          >
             Cancelar
           </button>
         </div>

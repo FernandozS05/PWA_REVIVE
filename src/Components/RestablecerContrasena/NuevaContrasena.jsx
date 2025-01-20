@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../img/Imagen1.png";
 
 const NuevaContrasena = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex h-screen">
       <div
@@ -34,7 +37,10 @@ const NuevaContrasena = () => {
           <button className="bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-700">
             Guardar
           </button>
-          <button className="bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700">
+          <button
+            className="bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700"
+            onClick={() => navigate("/restablecerContrasena")}
+          >
             Cancelar
           </button>
         </div>

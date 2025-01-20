@@ -17,6 +17,11 @@ import NuevaContrasena from "./Components/RestablecerContrasena/NuevaContrasena"
 import Menu from "./Components/Menu";
 import Catalogo from "./Components/Especies/Catalogo";
 import FormularioEspecie from "./Components/Especies/FormularioEspecie";
+import TablaUsuarios from "./Components/Usuarios/TablaUsuarios";
+import ListadoUsuarios from "./Components/Usuarios/ListadoUsuarios";
+import FormularioUsuario from "./Components/Usuarios/FormularioUsuario";
+import ListadoEmpleados from "./Components/Usuarios/ListadoEmpleados";
+import ListadoRecolectores from "./Components/Usuarios/ListadoRecolectores";
 
 const MenuWrapper = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,6 +68,26 @@ const App = () => {
               <Route
                 path="/formularioEspecie"
                 element={<FormularioEspecie />}
+              />
+              <Route
+                path="/tablaUsuarios"
+                element={<TablaUsuarios />}
+              />
+              <Route
+                path="/listadoUsuarios"
+                element={<ListadoUsuarios />}
+              />
+              <Route
+                path="/formularioUsuario"
+                element={<FormularioUsuario />}
+              />
+              <Route
+                path="/listadoEmpleados"
+                element={<ListadoEmpleados />}
+              />
+              <Route
+                path="/listadoRecolectores"
+                element={<ListadoRecolectores />}
               />
             </Routes>
           </div>

@@ -3,7 +3,7 @@ import Agregar from "../img/agregar.png";
 import Buscar from "../img/buscar.png";
 import Visualizar from "../img/visualizar.png";
 
-const Catalogo = () => {
+const Catalogo = ({ onEditarEspecie, onEliminarEspecie }) => {
   const [buscarEspecie, setBuscarEspecie] = useState("");
   const [especies, setEspecies] = useState([]);
   const [especieSeleccionada, setEspecieSeleccionada] = useState(null);
@@ -174,6 +174,24 @@ const Catalogo = () => {
           <p className="mb-4">
             {especieSeleccionada.registration_date || "No especificado"}
           </p>
+
+          <div className="flex gap-4 mt-6">
+            <button
+              className="flex items-center gap-2 bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-700"
+              onClick={() => {
+                onEditarEspecie(especieSeleccionada);
+                window.location.href = "/formularioEspecie";
+              }}
+            >
+              Editar
+            </button>
+            <button
+              className="flex items-center gap-2 bg-red-600 text-white font-bold px-4 py-2 rounded hover:bg-red-700"
+              onClick={() => onEliminarEspecie(especieSeleccionada.id)}
+            >
+              Eliminar
+            </button>
+          </div>
         </div>
       )}
 

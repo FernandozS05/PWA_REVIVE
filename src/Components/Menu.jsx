@@ -15,6 +15,13 @@ import Tratamiento from "./img/tratamiento.png";
 import Almacenamiento from "./img/almacenamiento.png";
 import Distribucion from "./img/distribucion.png";
 import Calendario from "./img/calendario.png";
+import Siembra from "./img/siembra.png";
+import Evaluacion from "./img/evaluacion.png";
+import Salida from "./img/salida.png";
+import ArbolCampeon from "./img/arbol.png";
+import Donacion from "./img/donacion.png";
+import Desecho from "./img/desecho.png";
+import Seguimiento from "./img/seguimiento.png";
 
 const SidebarContext = createContext();
 
@@ -162,6 +169,69 @@ export default function Menu() {
                       "/vivero/calendario"
                     ),
                 },
+                {
+                  text: "Siembra",
+                  icon: <img src={Siembra} alt="Siembra" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Siembra",
+                      "/vivero/siembra"
+                    ),
+                },
+                {
+                  text: "Evaluación",
+                  icon: <img src={Evaluacion} alt="Evaluación" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Evaluación",
+                      "/vivero/evaluacion"
+                    ),
+                },
+                {
+                  text: "Salida",
+                  icon: <img src={Salida} alt="Salida" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Salida",
+                      "/vivero/salida"
+                    ),
+                },
+                {
+                  text: "Árbol Campeón",
+                  icon: <img src={ArbolCampeon} alt="Árbol Campeón" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Árbol Campeón",
+                      "/vivero/arbolCampeon"
+                    ),
+                },
+                {
+                  text: "Donación",
+                  icon: <img src={Donacion} alt="Donación" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Donación",
+                      "/vivero/donacion"
+                    ),
+                },
+                {
+                  text: "Desecho",
+                  icon: <img src={Desecho} alt="Desecho" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Desecho",
+                      "/vivero/desecho"
+                    ),
+                },
+                {
+                  text: "Seguimiento a Clientes",
+                  icon: <img src={Seguimiento} alt="Seguimiento a Clientes" />,
+                  onClick: () =>
+                    handleSubItemClick(
+                      "Seguimiento a Clientes",
+                      "/vivero/seguimiento"
+                    ),
+                },
               ]}
               activeSubItem={activeSubItem}
             />
@@ -169,7 +239,7 @@ export default function Menu() {
               icon={<img src={Usuarios} alt="Usuarios" />}
               text="Usuarios"
               active={activeItem === "Usuarios"}
-              onClick={() => handleItemClick("Usuarios", "/usuarios")}
+              onClick={() => handleItemClick("Usuarios", "/listadoUsuarios")}
             />
             <SidebarItem
               icon={<img src={Salir} alt="Logout" />}

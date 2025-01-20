@@ -14,21 +14,23 @@ import Fecha from "../img/fecha.png";
 import Guardar from "../img/guardar.png";
 import Cancelar from "../img/cancelar.png";
 
-const FormularioEspecie = ({ onAgregarEspecie }) => {
-  const [formData, setFormData] = useState({
-    common_name: "",
-    scientific_name: "",
-    family: "",
-    categories: [],
-    climates: [],
-    genus: "",
-    description: "",
-    image: "",
-    price_per_kg: "",
-    seed_type: "",
-    characteristics: { barkColor: "", averageHeight: "" },
-    registration_date: "",
-  });
+const FormularioEspecie = ({ onAgregarEspecie, especieEditable }) => {
+  const [formData, setFormData] = useState(
+    especieEditable || {
+      common_name: "",
+      scientific_name: "",
+      family: "",
+      categories: [],
+      climates: [],
+      genus: "",
+      description: "",
+      image: "",
+      price_per_kg: "",
+      seed_type: "",
+      characteristics: { barkColor: "", averageHeight: "" },
+      registration_date: "",
+    }
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +38,7 @@ const FormularioEspecie = ({ onAgregarEspecie }) => {
   };
 
   const handleAgregar = () => {
-    onAgregarEspecie({ ...formData, id: Date.now() });
+    onAgregarEspecie({ ...formData, id: especieEditable?.id || Date.now() });
     setFormData({
       common_name: "",
       scientific_name: "",
@@ -82,7 +84,11 @@ const FormularioEspecie = ({ onAgregarEspecie }) => {
             Nombre Científico:
           </label>
           <div className="flex items-center gap-2">
-            <img src={NombreCientifico} alt="Nombre Científico" className="w-6 h-6" />
+            <img
+              src={NombreCientifico}
+              alt="Nombre Científico"
+              className="w-6 h-6"
+            />
             <input
               type="text"
               name="scientific_name"
@@ -244,7 +250,11 @@ const FormularioEspecie = ({ onAgregarEspecie }) => {
             Características:
           </label>
           <div className="flex items-center gap-2">
-            <img src={Caracteristicas} alt="Características" className="w-6 h-6" />
+            <img
+              src={Caracteristicas}
+              alt="Características"
+              className="w-6 h-6"
+            />
             <div className="flex gap-4">
               <input
                 type="text"
@@ -305,8 +315,10 @@ const FormularioEspecie = ({ onAgregarEspecie }) => {
             type="button"
             className="flex items-center gap-2 bg-green-600 text-white font-bold px-4 py-2 rounded hover:bg-green-700"
             onClick={handleAgregar}
-          > <img src={Guardar} alt="Agregar" className="w-5 h-5" />
-            Agregar
+          >
+            {" "}
+            <img src={Guardar} alt="Guardar" className="w-5 h-5" />
+            {especieEditable ? "Guardar Cambios" : "Agregar"}
           </button>
           <button
             type="button"
@@ -328,7 +340,8 @@ const FormularioEspecie = ({ onAgregarEspecie }) => {
               });
               window.location.href = "/catalogo";
             }}
-          > <img src={Cancelar} alt="Cancelar" className="w-5 h-5" />
+          >
+            <img src={Cancelar} alt="Cancelar" className="w-5 h-5" />
             Cancelar
           </button>
         </div>
