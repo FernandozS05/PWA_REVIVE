@@ -59,8 +59,8 @@ const DatosRecolector = ({ formData, onChange }) => (
           className="w-full border border-gray-300 p-2 rounded"
         >
           <option value="">Seleccione un género</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
           <option value="Otro">Otro</option>
         </select>
       </div>
@@ -97,23 +97,20 @@ const DatosRecolector = ({ formData, onChange }) => (
         />
       </div>
     </div>
-    {/* Tipo de Colaboración */}
+    {/* Ecorregiones */}
     <div className="mb-4">
-      <label className="block font-medium text-green-700">
-        Tipo de Colaboración:
-      </label>
+      <label className="block font-medium text-green-700">Ecorregiones:</label>
       <div className="flex items-center gap-2">
-        <img src={Colaboracion} alt="Área de Recolección" className="w-6 h-6" />
+        <img src={Colaboracion} alt="Ecorregiones" className="w-6 h-6" />
         <select
-          name="tipoColaboracion"
-          value={formData.tipoColaboracion || ""}
-          onChange={(e) => onChange("tipoColaboracion", e.target.value)}
+          name="ecoregions"
+          value={formData.ecoregions || ""}
+          onChange={(e) => onChange("ecoregions", e.target.value)}
           className="w-full border border-gray-300 p-2 rounded"
+          multiple
         >
-          <option value="">Seleccione un tipo</option>
-          <option value="Voluntario">Voluntario</option>
-          <option value="Contratado">Contratado</option>
-          <option value="Subcontratado">Subcontratado</option>
+          <option value="1">Grandes planicies</option>
+          <option value="9.6">Planicie semiárida de Tamaulipas y Texas</option>
         </select>
       </div>
     </div>

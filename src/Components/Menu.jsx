@@ -110,31 +110,31 @@ export default function Menu() {
                   text: "Recolecta",
                   icon: <img src={Recolecta} alt="Recolecta" />,
                   onClick: () =>
-                    handleSubItemClick("Recolecta", "/reserva/recolecta"),
+                    handleSubItemClick("Recolecta", "/listadoRecolectas"),
                 },
                 {
                   text: "Recepción",
                   icon: <img src={Recepcion} alt="Recepción" />,
                   onClick: () =>
-                    handleSubItemClick("Recepción", "/reserva/recepcion"),
+                    handleSubItemClick("Recepción", "/listadoLotes"),
                 },
                 {
                   text: "Beneficiado",
                   icon: <img src={Beneficiado} alt="Beneficiado" />,
                   onClick: () =>
-                    handleSubItemClick("Beneficiado", "/reserva/beneficiado"),
+                    handleSubItemClick("Beneficiado", "/listadoBeneficiado"),
                 },
                 {
                   text: "Viabilidad",
                   icon: <img src={Viabilidad} alt="Viabilidad" />,
                   onClick: () =>
-                    handleSubItemClick("Viabilidad", "/reserva/viabilidad"),
+                    handleSubItemClick("Viabilidad", "/listadoViabilidad"),
                 },
                 {
                   text: "Tratamiento",
                   icon: <img src={Tratamiento} alt="Tratamiento" />,
                   onClick: () =>
-                    handleSubItemClick("Tratamiento", "/reserva/tratamiento"),
+                    handleSubItemClick("Tratamiento", "/listadoTratamientos"),
                 },
                 {
                   text: "Almacenamiento",
@@ -142,14 +142,14 @@ export default function Menu() {
                   onClick: () =>
                     handleSubItemClick(
                       "Almacenamiento",
-                      "/reserva/almacenamiento"
+                      "/listadoAlmacenamiento"
                     ),
                 },
                 {
                   text: "Distribución",
                   icon: <img src={Distribucion} alt="Distribución" />,
                   onClick: () =>
-                    handleSubItemClick("Distribución", "/reserva/distribución"),
+                    handleSubItemClick("Distribución", "/listadoDistribucion"),
                 },
               ]}
               activeSubItem={activeSubItem}
@@ -166,7 +166,7 @@ export default function Menu() {
                   onClick: () =>
                     handleSubItemClick(
                       "Calendario Fenológico",
-                      "/vivero/calendario"
+                      "/calendario"
                     ),
                 },
                 {

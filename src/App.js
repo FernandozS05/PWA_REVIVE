@@ -17,11 +17,25 @@ import NuevaContrasena from "./Components/RestablecerContrasena/NuevaContrasena"
 import Menu from "./Components/Menu";
 import Catalogo from "./Components/Especies/Catalogo";
 import FormularioEspecie from "./Components/Especies/FormularioEspecie";
-import TablaUsuarios from "./Components/Usuarios/TablaUsuarios";
 import ListadoUsuarios from "./Components/Usuarios/ListadoUsuarios";
 import FormularioUsuario from "./Components/Usuarios/FormularioUsuario";
 import ListadoEmpleados from "./Components/Usuarios/ListadoEmpleados";
 import ListadoRecolectores from "./Components/Usuarios/ListadoRecolectores";
+import ListadoRecolectas from "./Components/Recolecta/ListadoRecolectas";
+import FormularioRecolecta from "./Components/Recolecta/FormularioRecolecta";
+import ListadoLotes from "./Components/Recepcion/ListadoLotes";
+import FormularioLotes from "./Components/Recepcion/FormularioLotes";
+import ListadoBeneficiado from "./Components/Beneficiado/ListadoBeneficiado";
+import FormularioBeneficiado from "./Components/Beneficiado/FormularioBeneficiado";
+import ListadoViabilidad from "./Components/Viabilidad/ListadoViabilidad";
+import FormularioViabilidad from "./Components/Viabilidad/FormularioViabilidad";
+import ListadoTratamientos from "./Components/Tratamiento/ListadoTratamientos";
+import FormularioTratamiento from "./Components/Tratamiento/FormularioTratamiento";
+import ListadoAlmacenamiento from "./Components/Almacenamiento/ListadoAlmacenamiento";
+import ListadoDistribucion from "./Components/Distribucion/ListadoDistribucion";
+import Calendario from "./Components/Calendario/CalendarioFenologico";
+
+
 
 const MenuWrapper = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,10 +84,6 @@ const App = () => {
                 element={<FormularioEspecie />}
               />
               <Route
-                path="/tablaUsuarios"
-                element={<TablaUsuarios />}
-              />
-              <Route
                 path="/listadoUsuarios"
                 element={<ListadoUsuarios />}
               />
@@ -88,6 +98,58 @@ const App = () => {
               <Route
                 path="/listadoRecolectores"
                 element={<ListadoRecolectores />}
+              />
+              <Route
+                path="/listadoRecolectas"
+                element={<ListadoRecolectas />}
+              />
+              <Route
+                path="/formularioRecolecta"
+                element={<FormularioRecolecta />}
+              />
+              <Route
+                path="/listadoLotes"
+                element={<ListadoLotes />}
+              />
+              <Route
+                path="/formularioLotes"
+                element={<FormularioLotes />}
+              />
+              <Route
+                path="/listadoBeneficiado"
+                element={<ListadoBeneficiado />}
+              />
+              <Route
+                path="/formularioBeneficiado"
+                element={<FormularioBeneficiado />}
+              />
+              <Route
+                path="/listadoViabilidad"
+                element={<ListadoViabilidad />}
+              />
+              <Route
+                path="/formularioViabilidad"
+                element={<FormularioViabilidad />}
+              />
+              <Route
+                path="/listadoTratamientos"
+                element={<ListadoTratamientos />}
+              />
+              <Route
+                path="/formularioTratamiento"
+                element={<FormularioTratamiento />}
+              />
+              <Route
+                path="/listadoAlmacenamiento"
+                element={<ListadoAlmacenamiento />}
+              />
+              <Route
+                path="/listadoDistribucion"
+                element={<ListadoDistribucion />}
+              />
+              <Route
+                path="/calendario"
+                element={<Calendario />}
               />
             </Routes>
           </div>

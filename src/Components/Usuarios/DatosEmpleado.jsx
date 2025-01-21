@@ -35,8 +35,8 @@ const DatosEmpleado = ({
           className="w-full border border-gray-300 p-2 rounded"
         >
           <option value="">Seleccione un género</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
           <option value="Otro">Otro</option>
         </select>
       </div>
